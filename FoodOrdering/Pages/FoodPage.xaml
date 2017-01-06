@@ -1,0 +1,69 @@
+﻿<Page x:Class="FoodOrdering.Pages.FoodPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:FoodOrdering.Pages"
+      xmlns:converters="using:FoodOrdering.Converters"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d">
+    
+    <Page.Resources>
+        <converters:PriceConverter x:Key="PriceConverter" />
+    </Page.Resources>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        
+        <ListView Name="listView"
+                  ItemsSource="{Binding FoodList}"
+                  Margin="8">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment"
+                            Value="Stretch" />
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock VerticalAlignment="Center">
+                            <Run Text="{Binding Name}" />
+                            <Run Text=" - " />
+                            <Run Text="{Binding Price, Converter={StaticResource PriceConverter}}" />
+                        </TextBlock>
+                        
+                        <Grid Grid.Column="1">
+                            <StackPanel Orientation="Horizontal">
+                                <Button Content="-"
+                                        Name="minusBtn"
+                                        Click="minusBtn_Click"/>
+                                <TextBox IsReadOnly="True"
+                                         Text="{Binding Count}" />
+                                <Button Content="+"
+                                        Name="addBtn" 
+                                        Click="addBtn_Click"/>
+                            </StackPanel>
+                        </Grid>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Grid VerticalAlignment="Bottom" Grid.Row="1"
+              Background="#333333">
+            <Button HorizontalAlignment="Right"
+                    Name="nextBtn"
+                    Margin="8"
+                    Content="Next"
+                    Background="Green"
+                    Click="nextBtn_Click"/>
+        </Grid>
+    </Grid>
+</Page>

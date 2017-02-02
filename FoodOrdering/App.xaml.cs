@@ -14,6 +14,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using FoodOrdering.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace FoodOrdering
 {
@@ -30,6 +32,11 @@ namespace FoodOrdering
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+
+            using (var db = new DatabaseContext())
+            {
+                db.Database.Migrate();
+            }
         }
 
         /// <summary>

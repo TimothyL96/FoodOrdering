@@ -8,22 +8,18 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
-        <TextBlock HorizontalAlignment="Left"
-                   Margin="10,10,0,0"
-                   TextWrapping="Wrap"
-                   Text="Tell us something"
-                   FontSize="50"
-                   VerticalAlignment="Top" />
-        
-        <TextBox HorizontalAlignment="Left"
-                 Margin="10,100,0,0"
-                 TextWrapping="Wrap"
-                 Text="Very good!"
-                 VerticalAlignment="Top"
-                 RenderTransformOrigin="-3.395,-0.298"
-                 Width="300"
-                 Height="100" />
+        <StackPanel>
+            <TextBlock HorizontalAlignment="Left"
+                       Margin="10,10,0,0"
+                       TextWrapping="Wrap"
+                       Text="Tell us something"
+                       FontSize="50"
+                       VerticalAlignment="Top" />
+            <TextBox Margin="16"
+                     TextWrapping="Wrap"
+                     Text="Very good!"
+                     Height="300" />
+        </StackPanel>
 
         <Grid VerticalAlignment="Bottom"
               Grid.Row="1"

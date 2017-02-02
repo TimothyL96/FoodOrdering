@@ -101,6 +101,8 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\DatabaseContext.cs" />
+    <Compile Include="Models\Feedback.cs" />
     <Compile Include="Pages\CheckOutPage.xaml.cs">
       <DependentUpon>CheckOutPage.xaml</DependentUpon>
     </Compile>

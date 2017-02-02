@@ -16,8 +16,8 @@ namespace FoodOrdering.ViewModels
         {
             RestaurantList = new ObservableCollection<string>();
 
-            foreach(var item in StaticResources.RestaurantImageUrls)
-                RestaurantList.Add(item);
+            //foreach(var item in StaticResources.RestaurantImageUrls)
+            //    RestaurantList.Add(item);
         }
     }
 }

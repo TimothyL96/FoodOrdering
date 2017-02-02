@@ -51,5 +51,10 @@ namespace FoodOrdering.Pages
             
             vm.TotalPrice = vm.OrderList.Sum(x => x.Price);
         }
+
+        private void orderBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(CheckOutPage));
+        }
     }
 }

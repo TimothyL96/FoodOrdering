@@ -30,9 +30,20 @@ namespace FoodOrdering.Pages
             this.DataContext = vm;
         }
 
-        protected override void OnNavigatedTo(NavigationEventArgs e)
+        protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
             MainPage.vm.Title = "SELECT RESTAURANT";
+
+            var list = await WebAPI.GetRestaurantsAsync();
+            if (list != null)
+            {
+                foreach (var item in list)
+                    vm.RestaurantList.Add(item);
+            }
+            else
+            {
+                MainPage.vm.Title = "NO INTERNET CONNECTION";
+            }
         }
 
         private void gridView_SelectionChanged(object sender, SelectionChangedEventArgs e)

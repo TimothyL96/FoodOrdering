@@ -63,10 +63,11 @@
             </TextBlock>
             
             <Button HorizontalAlignment="Right"
-                    Name="nextBtn"
+                    Name="orderBtn"
                     Margin="8"
                     Content="Order"
-                    Background="Green" />
+                    Background="Green"
+                    Click="orderBtn_Click" />
         </Grid>
     </Grid>
 </Page>

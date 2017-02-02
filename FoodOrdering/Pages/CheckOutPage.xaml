@@ -1,0 +1,212 @@
+﻿<Page x:Class="FoodOrdering.Pages.CheckOutPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:FoodOrdering.Pages"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <TextBlock HorizontalAlignment="Left"
+                   Margin="10,10,0,0"
+                   TextWrapping="Wrap"
+                   Text="Please select your payment method"
+                   VerticalAlignment="Top" />
+
+        <TextBlock HorizontalAlignment="Left"
+                   Margin="10,85,0,0"
+                   TextWrapping="Wrap"
+                   Text="Card number"
+                   VerticalAlignment="Top" />
+
+        <TextBlock HorizontalAlignment="Left"
+                   Margin="10,105,0,0"
+                   TextWrapping="Wrap"
+                   Text="Account number"
+                   VerticalAlignment="Top" />
+
+        <ComboBox HorizontalAlignment="Left"
+                  Margin="10,35,0,0"
+                  VerticalAlignment="Top"
+                  Width="120"
+                  SelectionChanged="ComboBox_SelectionChanged">
+            <ComboBoxItem Content="Visa"
+                          IsSelected="True" />
+            <ComboBoxItem Content="Master" />
+        </ComboBox>
+
+        <TextBox HorizontalAlignment="Left"
+                 Margin="10,130,0,0"
+                 TextWrapping="Wrap"
+                 Text=""
+                 VerticalAlignment="Top"
+                 Width="200" />
+
+        <TextBlock HorizontalAlignment="Left"
+                   Margin="220,105,0,0"
+                   TextWrapping="Wrap"
+                   Text="Expiration date"
+                   VerticalAlignment="Top" />
+
+        <ComboBox HorizontalAlignment="Left"
+                  Margin="220,130,0,0"
+                  VerticalAlignment="Top"
+                  Width="65"
+                  SelectionChanged="month_SelectionChanged">
+            <ComboBoxItem Content="--"
+                          IsSelected="True" />
+            <ComboBoxItem Content="01" />
+            <ComboBoxItem Content="02" />
+            <ComboBoxItem Content="03" />
+            <ComboBoxItem Content="04" />
+            <ComboBoxItem Content="05" />
+            <ComboBoxItem Content="06" />
+            <ComboBoxItem Content="07" />
+            <ComboBoxItem Content="08" />
+            <ComboBoxItem Content="09" />
+            <ComboBoxItem Content="10" />
+            <ComboBoxItem Content="11" />
+            <ComboBoxItem Content="12" />
+        </ComboBox>
+
+
+        <ComboBox HorizontalAlignment="Left"
+                  Margin="290,130,0,0"
+                  VerticalAlignment="Top"
+                  Width="65"
+                  SelectionChanged="year_SelectionChanged">
+            <ComboBoxItem Content="--"
+                          IsSelected="True" />
+            <ComboBoxItem Content="20" />
+            <ComboBoxItem Content="21" />
+            <ComboBoxItem Content="22" />
+            <ComboBoxItem Content="23" />
+            <ComboBoxItem Content="24" />
+        </ComboBox>
+
+        <TextBlock HorizontalAlignment="Left"
+                   Margin="365,105,0,0"
+                   TextWrapping="Wrap"
+                   Text="Security code"
+                   VerticalAlignment="Top" />
+
+        <TextBox HorizontalAlignment="Left"
+                 Margin="365,130,0,0"
+                 TextWrapping="Wrap"
+                 Text=""
+                 VerticalAlignment="Top"
+                 Width="65" />
+
+        <TextBlock HorizontalAlignment="Left"
+                   Margin="10,183,0,0"
+                   TextWrapping="Wrap"
+                   Text="Billing information"
+                   VerticalAlignment="Top" />
+
+        <TextBlock HorizontalAlignment="Left"
+                   Margin="10,208,0,0"
+                   TextWrapping="Wrap"
+                   Text="Name"
+                   VerticalAlignment="Top" />
+
+        <TextBox HorizontalAlignment="Left"
+                 Margin="10,233,0,0"
+                 TextWrapping="Wrap"
+                 Text=""
+                 VerticalAlignment="Top"
+                 Width="200" />
+
+        <TextBox HorizontalAlignment="Left"
+                 Margin="10,295,0,0"
+                 TextWrapping="Wrap"
+                 Text=""
+                 VerticalAlignment="Top"
+                 Width="200" />
+
+        <TextBox HorizontalAlignment="Left"
+                 Margin="220,233,0,0"
+                 TextWrapping="Wrap"
+                 Text=""
+                 VerticalAlignment="Top"
+                 Width="200" />
+
+        <TextBlock HorizontalAlignment="Left"
+                   Margin="10,270,0,0"
+                   TextWrapping="Wrap"
+                   Text="Address 1"
+                   VerticalAlignment="Top" />
+
+        <TextBlock HorizontalAlignment="Left"
+                   Margin="220,208,0,0"
+                   TextWrapping="Wrap"
+                   Text="City"
+                   VerticalAlignment="Top" />
+
+        <TextBox HorizontalAlignment="Left"
+                 Margin="220,295,0,0"
+                 TextWrapping="Wrap"
+                 Text=""
+                 VerticalAlignment="Top"
+                 Width="200" />
+
+        <TextBox HorizontalAlignment="Left"
+                 Margin="220,357,0,0"
+                 TextWrapping="Wrap"
+                 Text=""
+                 VerticalAlignment="Top"
+                 Width="200" />
+
+        <TextBox HorizontalAlignment="Left"
+                 Margin="10,438,0,0"
+                 TextWrapping="Wrap"
+                 Text=""
+                 VerticalAlignment="Top"
+                 Width="200" />
+
+        <TextBlock HorizontalAlignment="Left"
+                   Margin="220,270,0,0"
+                   TextWrapping="Wrap"
+                   Text="State"
+                   VerticalAlignment="Top"
+                   RenderTransformOrigin="-4.85,0.4" />
+
+        <TextBlock HorizontalAlignment="Left"
+                   Margin="220,336,0,0"
+                   TextWrapping="Wrap"
+                   Text="Zip"
+                   VerticalAlignment="Top"
+                   RenderTransformOrigin="-4.85,0.4" />
+
+        <TextBlock HorizontalAlignment="Left"
+                   Margin="10,413,0,0"
+                   TextWrapping="Wrap"
+                   Text="Phone number"
+                   VerticalAlignment="Top"
+                   RenderTransformOrigin="-4.85,0.4" />
+
+        <Grid VerticalAlignment="Bottom"
+              Grid.Row="1"
+              Background="#333333">
+            <Button HorizontalAlignment="Right"
+                    Name="proceedBtn"
+                    Margin="8"
+                    Content="Proceed"
+                    Background="Green"
+                    Click="proceedBtn_Click" />
+        </Grid>
+        <TextBlock HorizontalAlignment="Left"
+                   Margin="10,336,0,0"
+                   TextWrapping="Wrap"
+                   Text="Address 2"
+                   VerticalAlignment="Top"
+                   RenderTransformOrigin="-4.85,0.4" />
+        <TextBox HorizontalAlignment="Left"
+                 Margin="10,357,0,0"
+                 TextWrapping="Wrap"
+                 Text=""
+                 VerticalAlignment="Top"
+                 Width="200" />
+
+    </Grid>
+</Page>

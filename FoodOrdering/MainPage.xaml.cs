@@ -1,4 +1,5 @@
-﻿using FoodOrdering.Pages;
+﻿using FoodOrdering.Models;
+using FoodOrdering.Pages;
 using FoodOrdering.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -33,11 +34,32 @@ namespace FoodOrdering
             this.DataContext = vm;
         }
 
-        protected override void OnNavigatedTo(NavigationEventArgs e)
+        protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
             frame.Navigate(typeof(RestaurantPage));
 
             SystemNavigationManager.GetForCurrentView().BackRequested += (sender, _e) => frame.GoBack();
+
+         
+            var db = new DatabaseContext();
+
+            // read
+
+            var query = db.FeedBacks.Select(x => x.Message).ToList();
+            // equal to
+            //var query = db.FeedBacks.ToList();
+            //var result = new List<string>();
+            //foreach (var item in query)
+            //    result.Add(item.Message);
+
+            // write
+            db.FeedBacks.Add(new Feedback()
+            {
+                Message = ""
+            });
+            await db.SaveChangesAsync();         
+
+
         }
 
         private void frame_Navigated(object sender, NavigationEventArgs e)

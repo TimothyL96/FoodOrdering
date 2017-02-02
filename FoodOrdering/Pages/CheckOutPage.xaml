@@ -7,183 +7,77 @@
       mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ScrollViewer>
+            <StackPanel HorizontalAlignment="Center"
+                        Margin="4">
+                <StackPanel Orientation="Horizontal">
+                    <TextBox Header="Account number"
+                             Margin="4"
+                             Width="200"
+                             MaxLength="16"
+                             VerticalAlignment="Center" />
+                    <Grid Margin="4">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <TextBlock Text="Expiration date"
+                                   Margin="4" />
+                        <StackPanel Orientation="Horizontal"
+                                    Grid.Row="1">
+                            <ComboBox Margin="0,4,4,4">
+                                <ComboBoxItem Content="02" />
+                                <ComboBoxItem Content="03" />
+                                <ComboBoxItem Content="04" />
+                                <ComboBoxItem Content="05" />
+                                <ComboBoxItem Content="06" />
+                                <ComboBoxItem Content="07" />
+                                <ComboBoxItem Content="08" />
+                                <ComboBoxItem Content="09" />
+                                <ComboBoxItem Content="10" />
+                                <ComboBoxItem Content="11" />
+                                <ComboBoxItem Content="12" />
+                            </ComboBox>
+                            <ComboBox Margin="4">
+                                <ComboBoxItem Content="20"
+                                              IsSelected="True" />
+                                <ComboBoxItem Content="21" />
+                                <ComboBoxItem Content="22" />
+                                <ComboBoxItem Content="23" />
+                                <ComboBoxItem Content="24" />
+                            </ComboBox>
+                        </StackPanel>
+                    </Grid>
+                    <TextBox Header="Security code"
+                             VerticalAlignment="Center" />
+                </StackPanel>
 
-        <TextBlock HorizontalAlignment="Left"
-                   Margin="10,10,0,0"
-                   TextWrapping="Wrap"
-                   Text="Please select your payment method"
-                   VerticalAlignment="Top" />
-
-        <TextBlock HorizontalAlignment="Left"
-                   Margin="10,85,0,0"
-                   TextWrapping="Wrap"
-                   Text="Card number"
-                   VerticalAlignment="Top" />
-
-        <TextBlock HorizontalAlignment="Left"
-                   Margin="10,105,0,0"
-                   TextWrapping="Wrap"
-                   Text="Account number"
-                   VerticalAlignment="Top" />
-
-        <ComboBox HorizontalAlignment="Left"
-                  Margin="10,35,0,0"
-                  VerticalAlignment="Top"
-                  Width="120"
-                  SelectionChanged="ComboBox_SelectionChanged">
-            <ComboBoxItem Content="Visa"
-                          IsSelected="True" />
-            <ComboBoxItem Content="Master" />
-        </ComboBox>
-
-        <TextBox HorizontalAlignment="Left"
-                 Margin="10,130,0,0"
-                 TextWrapping="Wrap"
-                 Text=""
-                 VerticalAlignment="Top"
-                 Width="200" />
-
-        <TextBlock HorizontalAlignment="Left"
-                   Margin="220,105,0,0"
-                   TextWrapping="Wrap"
-                   Text="Expiration date"
-                   VerticalAlignment="Top" />
-
-        <ComboBox HorizontalAlignment="Left"
-                  Margin="220,130,0,0"
-                  VerticalAlignment="Top"
-                  Width="65"
-                  SelectionChanged="month_SelectionChanged">
-            <ComboBoxItem Content="--"
-                          IsSelected="True" />
-            <ComboBoxItem Content="01" />
-            <ComboBoxItem Content="02" />
-            <ComboBoxItem Content="03" />
-            <ComboBoxItem Content="04" />
-            <ComboBoxItem Content="05" />
-            <ComboBoxItem Content="06" />
-            <ComboBoxItem Content="07" />
-            <ComboBoxItem Content="08" />
-            <ComboBoxItem Content="09" />
-            <ComboBoxItem Content="10" />
-            <ComboBoxItem Content="11" />
-            <ComboBoxItem Content="12" />
-        </ComboBox>
-
-
-        <ComboBox HorizontalAlignment="Left"
-                  Margin="290,130,0,0"
-                  VerticalAlignment="Top"
-                  Width="65"
-                  SelectionChanged="year_SelectionChanged">
-            <ComboBoxItem Content="--"
-                          IsSelected="True" />
-            <ComboBoxItem Content="20" />
-            <ComboBoxItem Content="21" />
-            <ComboBoxItem Content="22" />
-            <ComboBoxItem Content="23" />
-            <ComboBoxItem Content="24" />
-        </ComboBox>
-
-        <TextBlock HorizontalAlignment="Left"
-                   Margin="365,105,0,0"
-                   TextWrapping="Wrap"
-                   Text="Security code"
-                   VerticalAlignment="Top" />
-
-        <TextBox HorizontalAlignment="Left"
-                 Margin="365,130,0,0"
-                 TextWrapping="Wrap"
-                 Text=""
-                 VerticalAlignment="Top"
-                 Width="65" />
-
-        <TextBlock HorizontalAlignment="Left"
-                   Margin="10,183,0,0"
-                   TextWrapping="Wrap"
-                   Text="Billing information"
-                   VerticalAlignment="Top" />
-
-        <TextBlock HorizontalAlignment="Left"
-                   Margin="10,208,0,0"
-                   TextWrapping="Wrap"
-                   Text="Name"
-                   VerticalAlignment="Top" />
-
-        <TextBox HorizontalAlignment="Left"
-                 Margin="10,233,0,0"
-                 TextWrapping="Wrap"
-                 Text=""
-                 VerticalAlignment="Top"
-                 Width="200" />
-
-        <TextBox HorizontalAlignment="Left"
-                 Margin="10,295,0,0"
-                 TextWrapping="Wrap"
-                 Text=""
-                 VerticalAlignment="Top"
-                 Width="200" />
-
-        <TextBox HorizontalAlignment="Left"
-                 Margin="220,233,0,0"
-                 TextWrapping="Wrap"
-                 Text=""
-                 VerticalAlignment="Top"
-                 Width="200" />
-
-        <TextBlock HorizontalAlignment="Left"
-                   Margin="10,270,0,0"
-                   TextWrapping="Wrap"
-                   Text="Address 1"
-                   VerticalAlignment="Top" />
-
-        <TextBlock HorizontalAlignment="Left"
-                   Margin="220,208,0,0"
-                   TextWrapping="Wrap"
-                   Text="City"
-                   VerticalAlignment="Top" />
-
-        <TextBox HorizontalAlignment="Left"
-                 Margin="220,295,0,0"
-                 TextWrapping="Wrap"
-                 Text=""
-                 VerticalAlignment="Top"
-                 Width="200" />
-
-        <TextBox HorizontalAlignment="Left"
-                 Margin="220,357,0,0"
-                 TextWrapping="Wrap"
-                 Text=""
-                 VerticalAlignment="Top"
-                 Width="200" />
-
-        <TextBox HorizontalAlignment="Left"
-                 Margin="10,438,0,0"
-                 TextWrapping="Wrap"
-                 Text=""
-                 VerticalAlignment="Top"
-                 Width="200" />
-
-        <TextBlock HorizontalAlignment="Left"
-                   Margin="220,270,0,0"
-                   TextWrapping="Wrap"
-                   Text="State"
-                   VerticalAlignment="Top"
-                   RenderTransformOrigin="-4.85,0.4" />
-
-        <TextBlock HorizontalAlignment="Left"
-                   Margin="220,336,0,0"
-                   TextWrapping="Wrap"
-                   Text="Zip"
-                   VerticalAlignment="Top"
-                   RenderTransformOrigin="-4.85,0.4" />
-
-        <TextBlock HorizontalAlignment="Left"
-                   Margin="10,413,0,0"
-                   TextWrapping="Wrap"
-                   Text="Phone number"
-                   VerticalAlignment="Top"
-                   RenderTransformOrigin="-4.85,0.4" />
+                <TextBlock Text="Billing information"
+                           Margin="4,12,4,4" />
+                <TextBox Header="Name"
+                         Margin="4" />
+                <TextBox Header="Address 1"
+                         Margin="4" />
+                <TextBox Header="Address 2"
+                         Margin="4" />
+                <TextBox Header="City"
+                         Width="200"
+                         HorizontalAlignment="Left"
+                         Margin="4" />
+                <TextBox Header="State"
+                         Width="200"
+                         HorizontalAlignment="Left"
+                         Margin="4" />
+                <TextBox Header="Zip"
+                         Width="200"
+                         HorizontalAlignment="Left"
+                         Margin="4" />
+                <TextBox Header="Phone number"
+                         Width="200"
+                         HorizontalAlignment="Left"
+                         Margin="4" />
+            </StackPanel>
+        </ScrollViewer>
 
         <Grid VerticalAlignment="Bottom"
               Grid.Row="1"
@@ -195,18 +89,6 @@
                     Background="Green"
                     Click="proceedBtn_Click" />
         </Grid>
-        <TextBlock HorizontalAlignment="Left"
-                   Margin="10,336,0,0"
-                   TextWrapping="Wrap"
-                   Text="Address 2"
-                   VerticalAlignment="Top"
-                   RenderTransformOrigin="-4.85,0.4" />
-        <TextBox HorizontalAlignment="Left"
-                 Margin="10,357,0,0"
-                 TextWrapping="Wrap"
-                 Text=""
-                 VerticalAlignment="Top"
-                 Width="200" />
 
     </Grid>
 </Page>

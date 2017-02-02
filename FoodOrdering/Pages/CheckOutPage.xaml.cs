@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FoodOrdering.Models;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -28,24 +29,18 @@ namespace FoodOrdering.Pages
             MainPage.vm.Title = "CHECK OUT";
         }
 
-        private void proceedBtn_Click(object sender, RoutedEventArgs e)
+           private async void submitBtn_Click(object sender, RoutedEventArgs e)
         {
+            var db = new DatabaseContext();
+            db.Orders.Add(new Order()
+            {
+                Address1 = "",
+                Address2 = ""
+            });
+
+            await db.SaveChangesAsync();
+
             Frame.Navigate(typeof(FeedbackPage));
-        }
-
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-     
-        }
-
-        private void month_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        private void year_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
         }
     }
 }

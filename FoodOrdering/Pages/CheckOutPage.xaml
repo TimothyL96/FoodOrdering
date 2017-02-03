@@ -15,6 +15,7 @@
                              Margin="4"
                              Width="200"
                              MaxLength="16"
+                             InputScope="Number"
                              VerticalAlignment="Center" />
                     <Grid Margin="4">
                         <Grid.RowDefinitions>
@@ -49,30 +50,38 @@
                         </StackPanel>
                     </Grid>
                     <TextBox Header="Security code"
+                             MaxLength="3"
                              VerticalAlignment="Center" />
                 </StackPanel>
 
                 <TextBlock Text="Billing information"
                            Margin="4,12,4,4" />
                 <TextBox Header="Name"
+                         MaxLength="20"
                          Margin="4" />
                 <TextBox Header="Address 1"
+                         MaxLength="30"
                          Margin="4" />
                 <TextBox Header="Address 2"
+                         MaxLength="30"
                          Margin="4" />
                 <TextBox Header="City"
+                         MaxLength="20"
                          Width="200"
                          HorizontalAlignment="Left"
                          Margin="4" />
                 <TextBox Header="State"
+                         MaxLength="15"
                          Width="200"
                          HorizontalAlignment="Left"
                          Margin="4" />
                 <TextBox Header="Zip"
+                         MaxLength="5"
                          Width="200"
                          HorizontalAlignment="Left"
                          Margin="4" />
                 <TextBox Header="Phone number"
+                         MaxLength="12"
                          Width="200"
                          HorizontalAlignment="Left"
                          Margin="4" />

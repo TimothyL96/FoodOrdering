@@ -29,13 +29,19 @@ namespace FoodOrdering.Pages
             MainPage.vm.Title = "CHECK OUT";
         }
 
-           private async void submitBtn_Click(object sender, RoutedEventArgs e)
+           private async void proceedBtn_Click(object sender, RoutedEventArgs e)
         {
             var db = new DatabaseContext();
             db.Orders.Add(new Order()
             {
+                AccountNumber = "",
+                Name     = "",
                 Address1 = "",
-                Address2 = ""
+                Address2 = "",
+                City     = "",
+                State    = "",
+                Zip      = "",
+                Phone    = ""
             });
 
             await db.SaveChangesAsync();

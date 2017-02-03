@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FoodOrdering.Models;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -31,6 +32,13 @@ namespace FoodOrdering.Pages
         private void submitBtn_Click(object sender, RoutedEventArgs e)
         {
             //send all info to database
+            var db = new DatabaseContext();
+            db.FeedBacks.Add(new Feedback()
+            {
+               Message = "",
+            });
+
+            //exit the app
             Application.Current.Exit();
         }
     }

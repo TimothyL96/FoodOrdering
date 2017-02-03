@@ -9,12 +9,14 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <StackPanel>
-            <TextBlock HorizontalAlignment="Left"
-                       Margin="10,10,0,0"
-                       TextWrapping="Wrap"
-                       Text="Tell us something"
-                       FontSize="50"
-                       VerticalAlignment="Top" />
+            <TextBlock  
+                        HorizontalAlignment="Left"
+                        Margin="10,10,0,0"
+                        TextWrapping="Wrap"
+                        Text="Tell us something"
+                        FontSize="50"
+                        VerticalAlignment="Top" />
+            
             <TextBox Margin="16"
                      TextWrapping="Wrap"
                      Text="Very good!"
